@@ -6,6 +6,7 @@ package t.claud.tpprgtclaudio.jsf;
 
 import jakarta.inject.Named;
 import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,20 +14,20 @@ import java.util.List;
  *
  * @author PC
  */
-@Named(value = "bean")
+@Named(value = "bean2")
 @RequestScoped
-public class Bean {
+public class Bean2 {
 
     /**
      * Creates a new instance of Bean
      */
-    public Bean() {
+    public Bean2() {
     }
 
     private int nombre;
 
     public int getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(int nombre) {
@@ -43,6 +44,6 @@ public class Bean {
     }
 
     public String afficher() {
-        return "affichage_4?nb=" + nombre + "&amp;faces-redirect=true";
+        return "formulaire_4?nb=" + nombre;
     }
 }
